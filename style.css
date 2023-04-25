@@ -1,0 +1,387 @@
+
+:root{
+  /* primary-color */
+  --clr-primary-100:hsl(180, 66%, 49%);
+  --clr-primary-900:hsl(257, 27%, 26%);
+
+  /* secondary-color */
+  --clr-secondary-200:hsl(0, 87%, 67%);
+
+  /* neutral-color */
+  --clr-neutral-100:hsl(0, 0%, 75%);
+  --clr-neutral-300: hsl(257, 7%, 63%);
+  --clr-neutral-500:hsl(255, 11%, 22%);
+  --clr-neutral-700:hsl(260, 8%, 14%);
+
+  /* font-size */
+  --fs-body:18px;
+
+  /* font-family */
+  --ff-body:'Poppins', sans-serif;
+
+  /* font-weights */
+  --fw-500:500;
+  --fw-700:700;
+}
+
+
+/* // https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-body);
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+header{
+  display: flex;
+  justify-content: space-around;  
+  height: 80px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.container{
+  display: flex;  
+  gap: 25px;
+
+}
+
+ul{
+  display: flex;
+  gap: 20px;
+}
+
+header a{
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-700);
+}
+
+header a:hover,header a:focus,a:active{
+  color: var(--clr-secondary-200);
+}
+
+.login-signup{
+  float: right;
+}
+
+.button-login{
+  padding: 8px 25px;
+  border: 0;
+  border-radius: 25px;
+  color: var(--clr-neutral-100);
+  background: transparent;
+  cursor: pointer;
+}
+
+.button{
+  padding: 8px 25px;
+  border:0;
+  border-radius: 25px;
+  background-color: var(--clr-primary-100);
+  color:#f5f5f5;
+  font-weight: var(--fw-500);
+  cursor: pointer;
+}
+
+.button:hover{
+  opacity: 0.3;
+}
+
+.main-content{
+  display: flex;
+  margin-top: 50px;
+}
+
+.content-text{
+  margin-left: 10rem;
+  width: 40%;
+}
+
+.content-text h1{
+  font-size: 60px;
+  font-weight: var(--fw-700);
+}
+
+.content-text p{
+  font-size: var(--fs-body);
+  color: var(--clr-neutral-300);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.short-link{
+    background-color: var(--clr-primary-900);
+    padding: 50px;
+    margin: 5rem 9rem;
+    background-image: url("images/bg-shorten-desktop.svg");
+    background-position: fixed;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.short-link input{
+  padding: 12px ;
+  width:80%;
+  border-radius: 8px;
+  border: 0;
+  margin-right: 10px;
+}
+
+.short-link button{
+  background-color: var(--clr-primary-100);
+  color: #f5f5f5;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.statistics{
+  background-color: var(--clr-neutral-100);
+  text-align: center;
+  padding: 40px;
+  height: 100vh;
+}
+
+.statistics h2{
+  font-weight: var(--fw-700);
+}
+
+.card{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 100px;
+}
+
+
+.card-one{
+  background-color: #fff;
+  text-align: center;
+  align-items: center;
+  width: 24%;
+  padding: 15px 15px  15px 15px;
+  margin-top: 25px;
+  border-radius: 8px;
+  position: absolute;
+  left: 12vw;
+}
+
+
+
+.card-oneimg,.card-twoimg,.card-threeimg{
+  background-color: var(--clr-primary-900);
+  width:70px;
+  height: 65px;
+  padding: 11px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.card-oneimg{
+  position: absolute;
+  top:-2vw;
+}
+
+
+
+.card-oneimg img,.card-twoimg img,.card-threeimg img{
+  width: 88%;
+}
+
+.card-onetext,.card-twotext,.card-threetext{
+  margin-top: 50px;
+  padding: 10px;
+  align-items: center;
+  text-align: left;
+}
+
+.card-onetext p,.card-twotext p,.card-threetext p{
+  color:var(--clr-neutral-300);
+  font-size:13px ;
+}
+
+
+.card-two{
+  background-color: #fff;
+  padding: 15px ;
+  width: 24%;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  top: 90vW;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.card-twoimg{
+  position: absolute;
+  bottom:13vw;
+}
+
+
+.card-three{
+  background-color: #fff;
+  text-align: center;
+  padding: 15px;
+  align-items: center;
+  width: 24%;
+  position: absolute;
+  left: 63vw;
+  top:95vw;
+  border-radius: 10px;
+}
+
+.card-threeimg{
+  position: absolute;
+  bottom: 13.2vw;
+}
+
+.hr1{
+  width:400px;
+  height: 10px;
+  border: 0;
+  background-color: var(--clr-primary-100);
+  position: absolute;
+  top: 98vw;
+  left: 35.8vw;
+}
+
+
+.boost-container{
+  text-align: center;
+  padding: 50px;
+  background-color: var(--clr-primary-900);
+  background-image: url("images/bg-boost-desktop.svg");
+}
+
+.boost-container h2{
+  color: #f5f5f5;
+  font-size:30px;
+  font-weight: var(--fw-700);
+  margin-bottom: 15px;
+}
+
+footer{
+  background-color: var(--clr-neutral-700);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer a{
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover{
+  color: var(--clr-primary-100);
+}
+
+footer nav{
+  width: 100%;
+
+}
+
+.footer-logo{
+  fill: #fff;
+}
+
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  gap: 50px;
+  text-align: left;
+}
+
+.footer-container h4{
+  color: #fff;
+  font-weight: var(--fw-700);
+}
+
+.features ul,.resources ul,.company ul{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 13px;
+}
+
+.social-icon{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  
+}
+
+.social-icon img{
+  width: 18px;
+}
